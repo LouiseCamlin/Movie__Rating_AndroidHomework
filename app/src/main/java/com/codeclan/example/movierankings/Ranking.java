@@ -13,4 +13,18 @@ public class Ranking {
 
     }
 
+    public void addMovie(Movie movie){
+        int movieRankingIndex = movie.getRanking() - 1;
+        movies[movieRankingIndex] = movie;
+    }
+
+
+    public Movie getMovieByRanking(int ranking) {
+        int index = ranking -1;
+        return this.movies[index];
+    }
+
+
+
 }
+

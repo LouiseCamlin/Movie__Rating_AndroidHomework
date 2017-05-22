@@ -1,5 +1,6 @@
 package com.codeclan.example.movierankings;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -9,12 +10,25 @@ import static org.junit.Assert.*;
  */
 public class RankingTest {
 
+    Movie movie;
     Ranking ranking;
-    Movie movies;
+
+
+    @Before
+    public void before(){
+        ranking = new Ranking();
+        movie = new Movie("Pulp Fiction", "Crime", 7);
+        ranking.addMovie(movie);
+
+    }
+
 
     @Test
-    public void arrayStartsEmpty(){
-        assertEquals(0, movie.size());
+    public void canGetMovieByRank(){
+        assertEquals(movie, ranking.getMovieByRanking(7));
     }
+
+
+
 
 }
