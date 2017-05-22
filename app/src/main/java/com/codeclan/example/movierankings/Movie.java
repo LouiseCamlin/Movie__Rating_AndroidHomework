@@ -16,12 +16,20 @@ public class Movie {
         this.ranking = ranking;
     }
 
-    public String getname() {
+    public String getName() {
         return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 
     public String getGenre() {
         return genre;
+    }
+
+    public void setGenre(String genre){
+        this.genre = genre;
     }
 
     public int getRanking() {
@@ -31,4 +39,11 @@ public class Movie {
     public void setRanking(int ranking) {
         this.ranking = ranking;
     }
+
+    @Override
+    public String toString(){
+        return "Title: " + this.name + ", Genre: " + this.genre + ", Rank: " + this.ranking;
+    }
+
+
 }

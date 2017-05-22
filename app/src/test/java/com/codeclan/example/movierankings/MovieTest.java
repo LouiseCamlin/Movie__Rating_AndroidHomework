@@ -21,7 +21,7 @@ public class MovieTest {
 
     @Test
     public void canGetName(){
-        assertEquals("The Shawshank Redemption", movie.getname());
+        assertEquals("The Shawshank Redemption", movie.getName());
     }
 
     @Test
@@ -39,7 +39,11 @@ public class MovieTest {
         movie.setRanking(2);
         int ranking = movie.getRanking();
         assertEquals(2, ranking);
+    }
 
+    @Test
+    public void canPrintString(){
+        assertEquals("Title: The Shawshank Redemption, Genre: Drama, Rank: 1", movie.toString());
     }
 
 
