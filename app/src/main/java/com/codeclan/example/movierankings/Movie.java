@@ -10,6 +10,7 @@ public class Movie {
     private String genre;
     private int ranking;
 
+
     public Movie(String name, String genre, int ranking){
         this.name = name;
         this.genre = genre;
